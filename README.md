@@ -8,6 +8,7 @@ A clean and functional Task Management application built with Vanilla JavaScript
 * **Input Validation**: Includes logic to prevent empty tasks and ensures a clean user experience.
 * **Event-Driven Architecture**: Utilizes anonymous arrow functions and event listeners for efficient state management.
 * **Interactive UI**: Real-time feedback using CSS class toggling for completed tasks.
+* **local storage**: This application uses the browser's Local Storage API to ensure that your tasks are not lost when the page is refreshed or the browser is closed.
 
 ## 🛠️ Tech Stack
 * **JavaScript (DOM API)**: Core engine for creating, appending, and removing elements dynamically.
