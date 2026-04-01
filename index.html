@@ -2,22 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined"
-    rel="stylesheet">
+    <title> Todo list </title>
     <link rel="stylesheet" href="TO Do.css">
-    <title>To DO List </title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="todo-list">
-        <h1>Todo List </h1>
+
+    <div id="todo-container">
+        <h1>My Tasks</h1>
+        
         <form id="todo-form">
-            <input type="text" id="todo-input" placeholder="Add a task">
-            <button type="submit">Add</button>
+            <input type="text" id="todo-input" placeholder="What's the plan?" required autocomplete="off">
+            <button type="submit" id="add-btn">Add</button>
         </form>
-        <ul id="tasks"></ul> 
+
+        <ul id="tasks-list"></ul>
     </div>
+
+    <script src="app.js"></script>
 </body>
-<script src="app.js"></script>
 </html>
