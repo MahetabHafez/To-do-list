@@ -1,76 +1,153 @@
-#todo-list{
-    width: 500px;
-    margin: 0 auto;
-    text-align: center;
-}
-#todo-form{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-#todo-input{
-    width: 70%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid grey;
-    border-radius: 5px;
-    outline: none;
-    margin-right: 10px;
-}
-button[type="submit"]{
-    padding: 10px 20px; /* Fixed padding error */
-    background-color: lightblue;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-#tasks {
-    padding: 0; /* Important: Removes default list padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* --- Key Fixes for List Item Layout --- */
-.task-item { /* Changed 'li' selector to the more specific class name */
-    list-style: none;
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: lightgray;
-    border-radius: 5px;
-    
-    /* This is the crucial part to align text and buttons */
+body {
+    background: radial-gradient(circle at center, #1a1a2e 0%, #0a0a12 100%);
+    min-height: 100vh;
     display: flex;
-    justify-content: space-between; /* Pushes the text to the left and buttons to the right */
+    justify-content: center;
     align-items: center;
+    color: #fff;
+}
+
+#todo-container {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    width: 90%;
+    max-width: 480px;
+    padding: 3rem;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    background: linear-gradient(45deg, #00f2fe, #4facfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#todo-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+#todo-input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.07);
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+#todo-input:focus {
+    border-color: #00f2fe;
+    outline: none;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+#add-btn {
+    background: #00f2fe;
+    color: #0a0a12;
+    border: none;
+    border-radius: 15px;
+    padding: 0 25px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4);
+}
+
+.task-item {
+    background: rgba(255, 255, 255, 0.05);
+    margin-bottom: 15px;
+    padding: 18px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: 0.4s ease;
+    border: 1px solid transparent;
+}
+
+/* Green and Glow when done */
+.task-item.is-done {
+    background: rgba(46, 213, 115, 0.1);
+    border-color: rgba(46, 213, 115, 0.3);
+    transform: scale(0.98);
 }
 
 .task-text {
-    flex-grow: 1; /* Allows text to take up most of the space */
-    text-align: left;
-    margin-right: 15px; /* Adds space before buttons */
-}
-/* --- End Key Fixes --- */
-
-.task-text.completed {
-    text-decoration: line-through;
-    opacity: 0.6;
-}
-
-.complete-btn, .delete-btn {
-    padding: 5px 10px; /* Consistent button padding */
-    border: none;
-    border-radius: 5px;
+    font-size: 1.2rem;
+    flex: 1;
     cursor: pointer;
-    white-space: nowrap; /* Prevents button text from wrapping */
+    transition: 0.3s;
 }
 
-.complete-btn {
-   background-color: green;
+.completed-text {
+    text-decoration: line-through;
+    color: #2ed573; /* Green text */
+    opacity: 0.7;
+}
+
+/* The Shape (Checkmark Circle) */
+.status-circle {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #00f2fe;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: 0.3s;
+    flex-shrink: 0;
+}
+
+.is-done .status-circle {
+    background: #2ed573;
+    border-color: #2ed573;
     color: white;
-    margin-left: 10px;
 }
 
 .delete-btn {
-    background-color: brown;
-    color: white;
-    margin-left: 5px;
+    background: transparent;
+    color: #ff4757;
+    border: 1px solid #ff4757;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
 }
+
+.delete-btn:hover {
+    background: #ff4757;
+    color: white;
+}
+Set up a project using create-react-app or Vue CLI.
+Understand the basics of components, props, and state
+management.
+Create a simple component-based app (e.g., a weather
+app or calculator)Set up a project using create-react-app or Vue CLI.
+Understand the basics of components, props, and state
+management.
+Create a simple component-based app (e.g., a weather
+app or calculator)
